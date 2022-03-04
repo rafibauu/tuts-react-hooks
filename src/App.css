@@ -15,24 +15,34 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: calc(100% - 64px);
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
+  column-gap: 36px;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  margin: auto;
+  padding: 16px 20px;
+  font-size: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+  height: 100%;
+  padding: 16px;
+  display: grid;
+  align-items: flex-start;
+}
+
+.class-app {
+  background: #e91e63;
+}
+
+.functional-app {
+  background: #607d8b;
 }
