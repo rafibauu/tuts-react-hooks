@@ -7,13 +7,17 @@ class ClassApp extends Component {
   }
 
   componentDidMount() {
-    console.log('Class Component did mount')
+    // console.log('Class Component did mount')
     // callAPI1()
     // callAPI2()
   }
 
   componentDidUpdate() {
-    console.log('Component Class did update')
+    // console.log('Component Class did update')
+  } 
+
+  componentWillUnmount() {
+    
   }
 
   AddCounter = () => {
@@ -26,7 +30,7 @@ class ClassApp extends Component {
 
   render() {
     return (
-      <div className="app class-app">
+      <div className="class-app">
         <h1>Class Component</h1>
         <h2>Counter: {this.state.counter}</h2>
         <button onClick={() => this.setState({ counter: this.state.counter + 1 })}>

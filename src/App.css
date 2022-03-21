@@ -13,19 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  width: calc(100% - 64px);
-  min-height: calc(100vh - 64px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  column-gap: 36px;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 32px;
-}
-
 button {
   margin: auto;
   padding: 16px 20px;
@@ -33,10 +20,21 @@ button {
 }
 
 .app {
-  height: 100%;
-  padding: 16px;
-  display: grid;
-  align-items: flex-start;
+  padding: 24px;
+  display: flex;
+  column-gap: 24px;
+  background-color: #282c34;
+  width: 100%;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  box-sizing: border-box;
+}
+
+.app > * {
+  padding: 24px;
+  overflow: hidden;
+  flex: 1 1 0px;
 }
 
 .class-app {
