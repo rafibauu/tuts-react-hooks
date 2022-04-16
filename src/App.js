@@ -1,8 +1,6 @@
 import { createContext } from 'react';
-import Topbar from './components/Topbar';
-import Dashboard from './components/Dashboard';
-import Footer from './components/Footer';
-import './App.css';
+import Layout from './components/Layout';
+import ThemeProvider from './context/theme';
 
 export const UserContext = createContext({
   email: 'erdecode@gmail.com',
@@ -10,18 +8,11 @@ export const UserContext = createContext({
   id: '123wefdsf4'
 })
 
-export const ThemeContext = createContext({
-  theme: 'dark',
-  primary: 'red'
-})
-
 function App() {
   return (
-    <div className="app">
-      <Topbar />
-      <Dashboard />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <Layout />
+    </ThemeProvider>
   )
 }
 

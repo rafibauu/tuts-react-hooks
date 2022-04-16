@@ -1,13 +1,79 @@
+:root {
+  --bg-light: #cbd5e1;
+  --col-light: #000000;
+  --bg-dark: #0f172a;
+  --col-dark: #94a3b8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  text-align: center;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 64px auto 36px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app.light {
+  background-color: var(--bg-light);
+  color: var(--col-light);
+}
+
+.app.dark {
+  background-color: var(--bg-dark);
+  color: var(--col-dark);
+}
+
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  column-gap: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+.page {
+  padding: 24px;
+}
+
+.footer {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -5,24 +5,19 @@ class Dashboard extends Component {
   static contextType = UserContext;
 
   render() {
-    console.log('Dashboard', this.context)
+    const values = this.context
+    console.log('Dashboard', values)
     return (
       <div>
         Dashboard
-        <UserContext.Consumer>
-          {(values) => {
-            return (
-              <h1>
-                ID: {values.id}
-                <br />
-                Name: {values.name}
-                <br />
-                Email: {values.email}
-                <br />
-              </h1>
-            )
-          }}
-        </UserContext.Consumer>
+        <h1>
+          ID: {values.id}
+          <br />
+          Name: {values.name}
+          <br />
+          Email: {values.email}
+          <br />
+        </h1>
       </div>
     )
   }
