@@ -9,9 +9,9 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light')
 
-  useEffect(() => {
-    console.log('Theme provider', theme)
-  }, [theme])
+  // useEffect(() => {
+  //   console.log('Theme provider', theme)
+  // }, [theme])
 
   const SetDarkTheme = () => setTheme('dark')
 
