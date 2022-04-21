@@ -2,13 +2,11 @@
 import Topbar from './Topbar';
 import Footer from './Footer';
 import Home from '../page/Home';
-// import Login from '../page/Login';
-import LoginReducer from '../page/LoginReducer';
+import LoginContextPage from '../page/LoginContextPage';
 import { useTheme } from '../context/theme';
 
 const Layout = () => {
   const theme = useTheme()
-  // console.log('Layout Component', theme)
 
   return (
     <div className={`app ${theme.theme}`}>
@@ -16,8 +14,7 @@ const Layout = () => {
       <div className="page">
         Page Content
         <Home />
-        {/* <Login /> */}
-        <LoginReducer />
+        <LoginContextPage />
       </div>
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import Layout from './components/Layout';
 import ThemeProvider from './context/theme';
+import AuthProvider from './context/auth';
 
 export const UserContext = createContext({
   email: 'erdecode@gmail.com',
@@ -11,7 +12,9 @@ export const UserContext = createContext({
 function App() {
   return (
     <ThemeProvider>
-      <Layout />
+      <AuthProvider>
+        <Layout />
+      </AuthProvider>
     </ThemeProvider>
   )
 }

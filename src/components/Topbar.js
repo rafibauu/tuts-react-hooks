@@ -1,8 +1,7 @@
-import { useTheme } from '../context/theme'
+import { useAuth } from '../context/auth'
 
 const Topbar = () => {
-  const theme = useTheme()
-  // console.log('Topbar', theme)
+  const auth = useAuth()
 
   return (
     <nav className="topbar">
@@ -11,9 +10,14 @@ const Topbar = () => {
           <h1>Topbar App</h1>
         </div>
         <div>
-          {/* <UserContext.Consumer>
-            {(values) =><p>{values.email}</p>}
-          </UserContext.Consumer> */}
+          {auth.isLoggedIn ? (
+            <p>{auth.user.email}</p>
+          ) : (
+            <div>
+              <button>Register</button>
+              <button>Signin</button>
+            </div>
+          )}
         </div>
       </div>
     </nav>
