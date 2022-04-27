@@ -2,7 +2,8 @@
 import Topbar from './Topbar';
 import Footer from './Footer';
 import Home from '../page/Home';
-import LoginContextPage from '../page/LoginContextPage';
+import Posts from '../page/Posts';
+import Users from '../page/Users';
 import { useTheme } from '../context/theme';
 
 const Layout = () => {
@@ -14,7 +15,8 @@ const Layout = () => {
       <div className="page">
         Page Content
         <Home />
-        <LoginContextPage />
+        <Users />
+        {/* <Posts /> */}
       </div>
       <Footer />
     </div>
